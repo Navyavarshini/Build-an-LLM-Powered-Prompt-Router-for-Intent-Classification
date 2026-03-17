@@ -1,0 +1,12 @@
+
+
+services:
+  prompt-router:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    command: python main.py
